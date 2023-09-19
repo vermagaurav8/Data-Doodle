@@ -1,0 +1,35 @@
+.imageLink{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.files {
+    width: 150px;
+    height: 150px;
+    background-color: #64748b;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.major {
+    margin-top: 20px;
+}
+
+.fileGrid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 30px;
+    justify-content: center;
+}
+
+.title {
+    font-weight: 700;
+    color: #0f172a;
+}
