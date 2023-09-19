@@ -4,6 +4,14 @@ interface Button {
     onClick?: () => void
 }
 
+interface Progress {
+    progress: number
+}
+
+interface ArrayType {
+    map: Function
+}
+
 interface GithubAuth {
     clientId: string,
     clientSecret: string

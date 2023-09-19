@@ -12,3 +12,4 @@ export const addFiles = (imageLink: string) => {
         console.log(error);
     }
 }
+
