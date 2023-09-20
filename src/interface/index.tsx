@@ -16,3 +16,7 @@ interface GithubAuth {
     clientId: string,
     clientSecret: string
 }
+
+interface Folder {
+    parentId: any
+}

@@ -24,9 +24,11 @@
 .fileGrid {
     width: 100%;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(6, auto);
     gap: 30px;
-    justify-content: center;
+    justify-content: flex-start;
+    padding: 30px;
+
 }
 
 .title {

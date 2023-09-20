@@ -8,8 +8,8 @@ const HomeComponent = () => {
     return (
         <div>
             <Navbar />
-            <UploadFiles />
-            <ShowFiles />
+            <UploadFiles parentId="" />
+            <ShowFiles parentId=""/>
         </div>
     )
 }
