@@ -12,7 +12,7 @@ interface ArrayType {
     map: Function
 }
 
-interface GithubAuth {
+interface AuthInterface {
     clientId: string,
     clientSecret: string
 }
