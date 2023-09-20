@@ -4,14 +4,22 @@ import { fetchFiles } from '@/hooks/useFetchFile'
 import { useRouter } from 'next/router'
 import { AiFillFileText, AiFillFileExcel, AiFillFileImage, AiFillFileZip, AiFillFile } from 'react-icons/ai'
 import { BsFillFolderFill } from 'react-icons/bs'
+import { HiDotsVertical } from 'react-icons/hi'
 import { useFetchSession } from '@/hooks/useSession'
+import Email from 'next-auth/providers/email'
 
 const ShowFiles = ({parentId}: Folder) => {
   let { session } = useFetchSession();
   let { fileList } = fetchFiles(parentId, session?.user.email as string);
+  const [email, setEmail] = useState('')
+  const [currentFileId, setCurrentFileId] = useState('')
   const router = useRouter();
   const openFile = (fileLink: string) => {
       window.open(fileLink);
+  }
+
+  const getSharedEmails = () => {
+    console.log(email);
   }
 
   let re = /(?:\.([^.]+))?$/;
@@ -53,6 +61,8 @@ const ShowFiles = ({parentId}: Folder) => {
                 <div className={styles.files} onClick={() => openFile(file.imageLink)}>
                  {fileType(file.fileName)}
                  <p className={styles.title}>{short(file.fileName)}</p> 
+                 <div className={styles.dots}>
+                 </div>
                 </div>
               }
           </div>
