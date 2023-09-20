@@ -20,7 +20,7 @@ const UploadFiles = ({parentId}: Folder) => {
   }
 
   const uploadFolder = () => {
-    let payload = {
+    const payload = {
       folderName: folderName,
       isFolder: true,
       fileList: [],

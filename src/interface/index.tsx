@@ -8,8 +8,8 @@ interface Progress {
     progress: number
 }
 
-interface ArrayType {
-    map: Function
+interface ArrayType<T> {
+    map: (callback: (value: T, index: number, array: T[]) => any) => any[];
 }
 
 interface AuthInterface {

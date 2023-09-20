@@ -6,7 +6,7 @@ import { useEffect, useState } from "react"
 let files = collection(database, "files")
 
 export const fetchFiles = (parentId: Folder, userEmail: string) => {
-    const [fileList, setFileList] = useState<ArrayType>([])
+    const [fileList, setFileList] = useState<ArrayType<any>>([])
     const getFolders = () => {
         if(userEmail) {
             let emailQuery = query(files, where('userEmail', '==', userEmail))

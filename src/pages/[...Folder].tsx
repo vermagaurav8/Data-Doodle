@@ -6,7 +6,7 @@ import Navbar from '@/components/NavBar';
 import { useFetchSession } from '@/hooks/useSession';
 
 export default function Folder() {
-    let {session} = useFetchSession();
+    const {session} = useFetchSession();
     const router = useRouter();
     const parentId = router?.query.id;
   return (
