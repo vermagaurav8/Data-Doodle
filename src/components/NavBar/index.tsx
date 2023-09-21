@@ -9,12 +9,21 @@ export default function Navbar() {
     return (
         <div className={styles.authBtn}>
             {session ?           
-                (
+                (<div className="dropdown dropdown-end">
                     <img 
-                        onClick={() => signOut()}
                         className={styles.profileImg}
                         src={session?.user.image as string}
+                        tabIndex={0}
                     />
+                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                        <li className={styles.Button}><Button 
+                            onClick={() => signOut()} 
+                            btnClass='btn-secondary' 
+                            title='Sign Out'
+                        /></li>
+                    </ul>
+                </div>
+    
                 ) : (
                     <Button 
                         onClick={() => signIn()} 

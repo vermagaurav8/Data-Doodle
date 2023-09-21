@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 
+body, html {
+    background: whitesmoke;
+    height: 100vh;
+}

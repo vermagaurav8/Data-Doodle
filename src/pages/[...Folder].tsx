@@ -4,6 +4,9 @@ import UploadFiles from '@/components/UploadFiles';
 import ShowFiles from '@/components/ShowFiles';
 import Navbar from '@/components/NavBar';
 import { useFetchSession } from '@/hooks/useSession';
+import Lottie from 'lottie-react';
+import doodle from '../components/animation_lmsvf7hp.json'
+import styles  from './Folder.module.scss';
 
 export default function Folder() {
     const {session} = useFetchSession();
@@ -11,6 +14,7 @@ export default function Folder() {
     const parentId = router?.query.id;
   return (
     <div>
+      <Lottie animationData={doodle} className={styles.Lottie}/>
       <Navbar />
       {session ? (
         <>

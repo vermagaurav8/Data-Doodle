@@ -39,7 +39,7 @@ const UploadFiles = ({parentId}: Folder) => {
             setisFolderVisible(false) 
           }} 
           title="Add a File"  
-          btnClass='btn-primary' 
+          btnClass='btn-primary btn-outline' 
         />
         { isFileVisible ? (
             <input onChange={(event) => uploadFile(event)} type='file' className='file-input w-full max-w-xs'/>
@@ -50,7 +50,7 @@ const UploadFiles = ({parentId}: Folder) => {
             setFileVisible(false)
           }} 
           title="Add a Folder"  
-          btnClass='btn-success btn-outline' 
+          btnClass='btn-secondary btn-outline' 
         />
         {isFolderVisible ? 
           <>
@@ -59,9 +59,9 @@ const UploadFiles = ({parentId}: Folder) => {
               onChange={(event) => setFolderName(event?.target.value)} 
               value={folderName} 
               placeholder='Folder Name' 
-              className='input input-bordered input-accent w-full max-w-xs' 
+              className='input input-bordered input-secondary w-full max-w-xs' 
             /> 
-            <Button onClick={uploadFolder} title='Create'btnClass='btn-success' />
+            <Button onClick={uploadFolder} title='Create'btnClass='btn-primary' />
           </> :
           <></>
         }
